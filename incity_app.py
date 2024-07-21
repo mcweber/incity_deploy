@@ -1,10 +1,11 @@
 # ---------------------------------------------------
-# Version: 01.07.2024
+# Version: 21.07.2024
 # Author: M. Weber
 # ---------------------------------------------------
 # 30.06.2024 change websearch to Tavily
 # 30.06.2024 split into search for each keyword
 # 01.07.2024 Input for city
+# 21.07.2024 Switched to GPT-4o-mini
 # ---------------------------------------------------
 
 from datetime import datetime
@@ -22,7 +23,7 @@ import streamlit as st
 # Define Constants ---------------------------------------------------
 # CITY = ["Hamburg", "München", "Düsseldorf", "Berlin", "Frankfurt", "Dießen am Ammersee"]
 KATEGORIEN = ["Restaurant & Bars", "Kunst & Museen", "Kino & Theater", "Konzerte", "Szene"]
-LLM = "openai_gpt-4o"
+LLM = "openai_gpt-4o-mini"
 HEUTE = str(datetime.now().date())
 TEMPERATURE = 0.1
 
