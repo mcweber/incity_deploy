@@ -104,7 +104,7 @@ def ask_llm(web_results_str: str = "") -> str:
 def main() -> None:
     st.set_page_config(page_title='CITY Insight')
     st.title("CITY Insight")
-    st.write("Programmversion: 01.07.2024 Status: POC")
+    st.write("Programmversion: 21.07.2024 Status: POC")
     
     # Initialize Session State -----------------------------------------
     if 'city' not in st.session_state:
