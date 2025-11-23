@@ -106,7 +106,7 @@ smmap
 sniffio
 soupsieve
 stack-data
-streamlit
+streamlit==1.50.0
 style
 sympy
 tavily-python
