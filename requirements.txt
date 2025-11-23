@@ -73,7 +73,7 @@ pillow
 platformdirs
 prompt-toolkit
 proto-plus
-protobuf
+protobuf==3.20.3
 psutil
 ptyprocess
 pure-eval
