@@ -1,5 +1,5 @@
 # ---------------------------------------------------
-VERSION = "26.12.2024"
+VERSION = "23.11.2025"
 # Author: M. Weber
 # ---------------------------------------------------
 # 26.12.2024 switched to ask_llm.py
@@ -20,7 +20,6 @@ import ask_web
 KATEGORIEN = ["Restaurant & Bars", "Kunst & Museen", "Kino & Theater", "Konzerte", "Szene", "Sport"]
 LLM = "gemini"
 HEUTE = str(datetime.now().date())
-TEMPERATURE = 0.2
 
 web_handler = ask_web.WebSearch()
 llm_handler = ask_llm.LLMHandler(llm="gemini", local=False)
@@ -57,7 +56,6 @@ def write_summary(content: str = "", url: str = "") -> str:
         text = content
     if text != "":
         summary = llm_handler.ask_llm(
-            temperature=TEMPERATURE,
             question = f"Schreibe eine Zusammenfassung des folgendes Textes: {text}."
             )
     else:
@@ -103,7 +101,6 @@ def main() -> None:
         
         # LLM Search ------------------------------------------------
         response = llm_handler.ask_llm(
-            temperature=TEMPERATURE,
             question="Stelle die besten Tipps zusammen, mindestens 3 pro Kategorie.",
             system_prompt=SYSTEM_PROMPT, 
             web_results_str=web_results_str
